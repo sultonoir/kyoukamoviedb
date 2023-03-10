@@ -2,7 +2,7 @@ import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Movie from "./movie";
+import Movie from "./Movie";
 
 const Row = ({ title, fetchURL, rowID, type }) => {
   const [movies, setMovies] = useState([]);
