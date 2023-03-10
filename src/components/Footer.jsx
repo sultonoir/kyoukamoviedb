@@ -9,7 +9,7 @@ const Footer = () => {
     { icon: <IconBrandFigma />, nama: "sultonoir", link: `https://figma.com/@sultonoir` },
   ];
   return (
-    <div className="w-full p-4  mb-14 sm:mb-0 mt-4 bg-[url(/footer-bg.jpg)]">
+    <div className="w-full p-4  mb-14 sm:mb-0 mt-4 bg-[url(https://assets.nflxext.com/ffe/siteui/vlv3/a43711df-c428-4f88-8bb3-b2ac5f20608f/d018d3cd-2602-44a4-a9e2-5b66e5fef473/ID-en-20230227-popsignuptwoweeks-perspective_alpha_website_large.jpg)]">
       <div className="flex gap-y-4 flex-col-reverse sm:flex-row sm:justify-between h-full">
         <div className="flex flex-row ml-0 sm:ml-4 items-center justify-center text-white">
           <IconCopyright />
