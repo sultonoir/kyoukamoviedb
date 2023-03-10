@@ -32,7 +32,9 @@ const Hero = () => {
     <div className="w-full h-[550px] text-white mb-2">
       <div className="w-full h-full">
         <div className="w-full absolute h-[550px] bg-gradient-to-r from-latar-kon"></div>
-        <LazyLoadImage className="w-full h-full object-cover" src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} alt={movie?.title} />
+        <picture>
+          <LazyLoadImage className="w-full h-full object-cover" src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} alt={movie?.title} />
+        </picture>
         <div className="absolute max-w-2xl top-[20%] p-4 md:p-8">
           <h1 className="text-3xl md:text-5xl text-huruf">{truncateString(movie?.title, 150)}</h1>
           <div className="my-4 flex">

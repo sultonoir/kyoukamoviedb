@@ -50,7 +50,9 @@ const Search = () => {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4">
         {movieSearch?.map((movie) => (
           <div key={movie.id} className="cursor-pointer relative">
-            <LazyLoadImage className="w-full h-full rounded-xl mb-2" src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`} alt={movie?.title} />
+            <picture>
+              <LazyLoadImage className="w-full h-full rounded-xl mb-2" src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`} alt={movie?.title} />
+            </picture>
             <div className="absolute top-0 left-0 w-full h-full hover:bg-navbar opacity-0 hover:opacity-100 text-huruf rounded-xl">
               <p className="whitespace-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center p-2 " onClick={() => handleDetails(movie.id, "movie")}>
                 {movie.title}
@@ -63,7 +65,9 @@ const Search = () => {
         ))}
         {tvSearch?.map((movie) => (
           <div key={movie.id} className="cursor-pointer relative">
-            <LazyLoadImage className="w-full h-full rounded-xl mb-2" src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`} alt={movie?.name} />
+            <picture>
+              <LazyLoadImage className="w-full h-full rounded-xl mb-2" src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`} alt={movie?.name} />
+            </picture>
             <div className="absolute top-0 left-0 w-full h-full hover:bg-navbar opacity-0 hover:opacity-100 text-huruf rounded-xl">
               <p className="whitespace-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center p-2 " onClick={() => handleDetails(movie.id, "tv")}>
                 {movie.name}

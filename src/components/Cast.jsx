@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
 import "swiper/swiper.min.css";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 // import "swiper/css/navigation";
 
 SwiperCore.use([Navigation]);
@@ -87,7 +88,9 @@ const Cast = ({ id, type }) => {
         >
           {castDetails.map((c) => (
             <SwiperSlide key={c.id} className="cursor-grab">
-              <img className="rounded-lg" src={`https://image.tmdb.org/t/p/w500/${c?.profile_path}`} alt={c.original_name} />
+              <picture>
+                <LazyLoadImage className="rounded-lg" src={`https://image.tmdb.org/t/p/w500/${c?.profile_path}`} alt={c.original_name} />
+              </picture>
               <p className="mt-2">{truncateString(c?.original_name, 13)}</p>
               <p className="text-textsecond text-xs">{truncateString(c?.character || "N/A", 20)}</p>
             </SwiperSlide>

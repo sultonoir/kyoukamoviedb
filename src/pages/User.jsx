@@ -45,7 +45,9 @@ const User = () => {
           {movie.map((m) => (
             <div className="relative">
               <Link to={`/${m.type}/${m?.id}`} key={m.id} className="cursor-pointer relative hover:text-hvr flex flex-col gap-y-2">
-                <img className="w-full h-full rounded-xl" src={`${`https://image.tmdb.org/t/p/w500/${m.img}`}`} alt={m.title} />
+                <picture>
+                  <LazyLoadImage className="w-full h-full rounded-xl" src={`${`https://image.tmdb.org/t/p/w500/${m.img}`}`} alt={m.title} />
+                </picture>
                 <h1 className="h-16">{m.title}</h1>
               </Link>
               <div className="absolute top-4 left-4 cursor-pointer" onClick={() => deleteShow(m.id)}>

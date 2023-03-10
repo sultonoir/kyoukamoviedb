@@ -38,7 +38,9 @@ const Details = () => {
           <div className="w-full h-[550px] text-white mb-2">
             <div className="w-full h-full relative">
               <div className="w-full absolute h-[550px] bg-gradient-to-t from-latar-kon"></div>
-              <img className="w-full h-full object-cover" src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie?.title || movie.name} />
+              <picture>
+                <LazyLoadImage className="w-full h-full object-cover" src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie?.title || movie.name} />
+              </picture>
             </div>
           </div>
           <div className="flex max-sm:flex-col max-w-5xl m-auto gap-x-5 mb-6 px-3 text-huruf">

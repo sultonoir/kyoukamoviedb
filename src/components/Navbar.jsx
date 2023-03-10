@@ -1,6 +1,6 @@
 import { IconDeviceTv, IconHeartFilled, IconHome, IconMovie, IconUser } from "@tabler/icons-react";
 import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import DarkMode from "./DarkMode";
 import Searchbar from "./Searchbar";
 import User from "./User";
