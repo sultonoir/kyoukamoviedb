@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "transition-style";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
+
+@layer base {
+  :root {
+    --background-clr: rgb(35 36 37);
+    --text-clr: rgb(226, 226, 226);
+    --prymary-clr: rgb(252 38 38);
+    --textsecond: rgba(255, 255, 255, 0.6);
+    --navbar: rgba(0, 0, 0, 0.6);
+    --hvr: #d62020;
+  }
+  body {
+    background: var(--background-clr);
+    color: var(--text-clr);
+    font-family: Plus Jakarta Sans, sans-serif;
+  }
+
+  body.light {
+    --background-clr: rgb(236, 240, 242);
+    --text-clr: rgb(15, 15, 15);
+    --prymary-clr: rgb(252 38 38);
+    --textsecond: rgba(0, 0, 0, 0.6);
+    --navbar: rgba(255, 255, 255, 0.6);
+    --hvr: #d62020;
+  }
+  body.dracula {
+    --background-clr: rgb(40, 42, 54);
+    --text-clr: rgb(226, 226, 226);
+    --prymary-clr: rgb(212, 45, 144);
+    --textsecond: rgba(255, 255, 255, 0.6);
+    --navbar: rgba(0, 0, 0, 0.6);
+    --hvr: #b4267a;
+  }
+  body.lemon {
+    --background-clr: rgb(236, 240, 242);
+    --text-clr: rgb(15, 15, 15);
+    --prymary-clr: rgb(81, 153, 3);
+    --textsecond: rgba(0, 0, 0, 0.6);
+    --navbar: rgba(255, 255, 255, 0.6);
+    --hvr: #498a03;
+  }
+  body.kawaii {
+    --background-clr: rgb(240, 214, 232);
+    --text-clr: rgb(224, 53, 74);
+    --prymary-clr: rgb(175, 70, 112);
+    --textsecond: rgba(224, 53, 74, 0.6);
+    --navbar: rgba(240, 214, 232, 0.6);
+    --hvr: #9e3f65;
+  }
+  body.smoke {
+    --background-clr: rgb(236, 240, 242);
+    --text-clr: #272727;
+    --prymary-clr: rgb(122, 122, 122);
+    --textsecond: rgba(0, 0, 0, 0.6);
+    --navbar: rgba(255, 255, 255, 0.6);
+    --hvr: #6e6e6e;
+  }
+  .ac {
+    background-color: var(--prymary-clr);
+    color: #eee;
+  }
+  .active {
+    background-color: var(--prymary-clr);
+    color: #eee;
+  }
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-disabled {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .m {
+    display: none;
+  }
+}
+
+@keyframes circle-in-top-right {
+  from {
+    clip-path: circle(0%);
+  }
+  to {
+    clip-path: circle(150% at top right);
+  }
+}
+
+[transition-style="in:circle:top-right"] {
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-top-right both;
+}
