@@ -80,8 +80,6 @@ const Similar = ({ id, type }) => {
                     e.preventDefault();
                     window.open(`/${type}/${c.id}`, "_blank", "noopener noreferrer");
                   }}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="whitespace-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center p-2 cursor-pointer"
                 >
                   {c?.title || c?.name}
