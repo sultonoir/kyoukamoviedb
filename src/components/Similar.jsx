@@ -74,9 +74,18 @@ const Similar = ({ id, type }) => {
                 <LazyLoadImage className="rounded-lg" src={`https://image.tmdb.org/t/p/w500/${c?.poster_path}`} alt={c.title} />
               </picture>
               <div className="absolute top-0 left-0 w-full h-full hover:bg-black/80 opacity-0 hover:opacity-100 text-white rounded-lg">
-                <Link to={`/${type}/${c.id}`} target="_blank" rel="noopener noreferrer" className="whitespace-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center p-2 cursor-pointer">
+                <a
+                  href={`/${type}/${c.id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whitespace-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center p-2 cursor-pointer"
+                  onContextMenu={(e) => {
+                    e.preventDefault();
+                    window.open(`/${type}/${c.id}`, "_blank", "noopener noreferrer");
+                  }}
+                >
                   {c?.title || c?.name}
-                </Link>
+                </a>
               </div>
             </SwiperSlide>
           ))}
