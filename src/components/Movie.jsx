@@ -6,7 +6,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 const Movie = ({ movie, type }) => {
   return (
     <div className="w-[160px] sm:w-[200px] inline-block cursor-pointer relative mx-2">
-      <Link to={`/${type}/${movie?.id}`} className="">
+      <Link to={`/${type}/${movie?.id}`} target="_blank">
         <picture>
           <LazyLoadImage className="rounded-xl shadow-sm w-full h-full" src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`} alt={movie?.title || movie?.name || movie?.original_name} />
         </picture>
