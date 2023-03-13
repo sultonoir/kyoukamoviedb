@@ -16,7 +16,7 @@ const Footer = () => {
           <p>KyOuka-</p>
         </div>
         <div className="flex flex-col items-center h-full justify-center mr-0 sm:mr-4 gap-y-2">
-          <h1 className="text-white capitalize">follow me on social media</h1>
+          <h1 className="text-white capitalize">follow me on</h1>
           <div className="flex flex-row gap-x-3">
             {sosial.map((s) => (
               <a href={s.link} key={s.link} target="_blank" rel="noopener noreferrer">
