@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 AOS.init();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Router>
+  <Router basename="kyoukamoviedb">
     <App />
   </Router>
 );
