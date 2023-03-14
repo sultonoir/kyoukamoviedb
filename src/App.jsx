@@ -8,7 +8,6 @@ import Search from "./pages/Search";
 import NotFound from "./pages/NotFound";
 import { AuthContextProvider } from "./context/AuthContext";
 import User from "./pages/User";
-import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -36,7 +35,6 @@ export default function App() {
           <Route path="/Signup" element={<SignUp />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
       </AuthContextProvider>
     </>
   );
